@@ -1,0 +1,9 @@
+﻿block category-nav
+  .navbar
+    .navbar-inner
+      ul.nav
+        each category in categories
+          li
+            a(href="/category/#{category.seo}") #{category.name}
+      form.navbar-search.pull-right
+        input.search-query(type="text", placeholder="Search")
