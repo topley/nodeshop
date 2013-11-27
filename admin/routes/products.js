@@ -1,7 +1,7 @@
 // Require needed modules
 var db = require('../data'),
 config = require('../../shop/config.json');
-
+var moment = require('moment');
 // Export functions
 module.exports = {
 
@@ -34,7 +34,8 @@ module.exports = {
             title: config.store.tagline,
             logged: req.isAuthenticated(),
             user: req.user,
-            product: product
+            product: product,
+            moment: moment
         });
       });
     },
