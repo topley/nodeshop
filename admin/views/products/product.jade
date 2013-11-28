@@ -1,5 +1,98 @@
 extend ../layout
 block content
+
+	.row
+		.page-header
+			h2 #{product.name}
+
+	form.row
+		.span6
+			h3 Details
+			table.table.table-striped.table-bordered
+				tbody
+					tr.success
+						th.span3 	Name
+						td.span9 	#{product.name}
+					tr
+						th 	SKU
+						td 	#{product.sku}
+					tr
+						th 	Category
+						td 	#{product.category}
+					tr
+						th 	UPC
+						td 	#{product.upc}
+					tr
+						th 	SEO
+						td 	#{product.seo}
+					tr
+						th 	Date
+						td 	#{moment(product.date).format("YYYY-MM-DD HH:mm")}
+					tr
+						th 	Featured
+						td 	#{product.featured}
+
+			h3 Pricing
+			table.table.table-bordered
+				tbody
+					tr
+						th.span3 Pricing
+						td.span9 	
+							table.table.table-condensed
+								tr
+									td 	List
+									td 	Retail
+									td 	% Saving
+								tr
+									td 	#{product.pricing.list}
+									td 	#{product.pricing.retail}
+									td 	#{product.pricing.pct_savings}
+
+
+			h3 Shipping
+			table.table.table-bordered
+				tbody
+					tr
+						th.span3 	Weight
+						td.span9 	#{product.shipping.weight}
+					tr
+						th.span3 	Dimensions
+						td.span9 	
+							table.table.table-condensed
+								tr
+									td 	Width
+									td 	Height
+									td 	Depth
+								tr
+									td 	#{product.shipping.dimensions.width}
+									td 	#{product.shipping.dimensions.height}
+									td 	#{product.shipping.dimensions.depth}
+
+		.span6
+			h3 Images
+			img(src="http://placehold.it/450x350")
+			//- .row.center
+			ul.thumbnails
+				li
+					img.img-polaroid(src="http://placehold.it/100x60")
+				li
+					img.img-polaroid(src="http://placehold.it/100x60")
+				li
+					img.img-polaroid(src="http://placehold.it/100x60")
+				li
+					img.img-polaroid(src="http://placehold.it/100x60")
+
+		
+		table.table.table-bordered
+			tbody
+				tr
+					th.span3 	Details
+					td.span9 	#{JSON.stringify(product.details)}
+
+			
+
+			
+
     form(action="/products/#{product._id}", method="post", role="form", name="form").form-horizontal#form
         .panel.panel-default
             .panel-heading Details
@@ -46,3 +139,4 @@ block scripts
     script(src="/js/plugins/jquery.validate.min.js", type="text/javascript")
     script(src="/js/plugins/typeahead.min.min.js")
     script(src="/js/controller/product.js")
+

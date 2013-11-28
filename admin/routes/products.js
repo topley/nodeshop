@@ -1,7 +1,7 @@
 // Require needed modules
+var moment = require('moment');
 var Product = require('../../schemas/product');
 var config = require('../../shop/config.json');
-
 // Export functions
 module.exports = {
 
@@ -33,7 +33,8 @@ module.exports = {
             title: 'Editing ' + product.name,
             logged: req.isAuthenticated(),
             user: req.user,
-            product: product
+            product: product,
+            moment: moment
         });
       });
     },
