@@ -53,7 +53,7 @@ require('./shop/router')(app, passport);
 // Listen for requests
 app.listen(app.get('port'));
 
-console.log('NodeShop v' + info.version + ' listening on port ' + process.env.PORT);
+console.log('NodeShop v' + info.version + ' listening on port ' + app.get('port'));
 
 // Handle all uncaught errors
 process.on('uncaughtException', function(err) {
