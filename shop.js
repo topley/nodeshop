@@ -22,6 +22,7 @@ app.configure(function(){
     // Set up jade
     app.set('views', __dirname + '/shop/views');
     app.set('view engine', 'jade');
+    app.set('port', process.env.PORT || 80);
     
     app.use(express.favicon());
     app.use(express.cookieParser());
@@ -50,7 +51,7 @@ app.configure(function(){
 require('./shop/router')(app, passport);
 
 // Listen for requests
-app.listen(process.env.PORT);
+app.listen(app.get('port'));
 
 console.log('NodeShop v' + info.version + ' listening on port ' + process.env.PORT);
 
