@@ -13,7 +13,7 @@ Here are some known areas with issues that need addressing:
   * Search does not work
   * No method of payment yet
 
-#Update 27 November '13
+# Update 27 November '13
 
 Heres a little update to prove I'm alive and still working on NodeShop.
 
@@ -22,7 +22,7 @@ Updated the admin area to bootstrap 3.0, the shop front is currently in progress
 Also made the admin area more functional, please dont mess up the DB too much...
   
 
-#Update 21 August '13
+# Update 21 August '13
 
 Sorry it's been a while but I've been busy recently looking for a new job. 
 
@@ -36,13 +36,13 @@ Here's whats new in 0.0.6:
   * Started product page in admin area
   * Few other bits that i've forgot
 
-#Update 28 June '13
+# Update 28 June '13
 
 Tidied up some more code, updated the file structure. Added a guest checkout with form validation. Coming soon will be the order form with some kind of payment system, probably paypal.
 
 Started working on an admin area which is slowly coming along, will probably be in the next release.
 
-#Update 23 May '13
+# Update 23 May '13
 
 Quite a few areas of the system have been tidied up and improved, most notably the shopping cart, the basics of a checkout, the category system and the login system. 
 
