@@ -7,7 +7,7 @@
         "passport" : "*",
         "passport-local" : "*",
         "connect-mongo" : "*",
-        "mongoose" : "*",
+        "mongoose" : ">=4.11.2",
         "bcrypt" : "*",
         "underscore" : "*",
         "request" : "*",
